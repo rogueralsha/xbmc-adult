@@ -33,12 +33,12 @@ def INDEX(url):
         link = getHtml(url)
         link = re.compile('content">[\s\S]+<div class="desktop-only">([.\s\S]+)<div class="mobile-only').findall(link)[0]
         matchname = re.compile('title">[^>]+>([^<]+)').findall(link)
-        matchurl = re.compile('class="frame" href="(/videos/.+?\d+.html)').findall(link)
-        matchthumb = re.compile('data-original="([^"]+jpg)').findall(link)
+        matchurl = re.compile('class="frame[^"]*" href="(/videos/.+?\d+.html)" target="_self">').findall(link)
+        matchthumb = re.compile('img-responsive" (?:alt=""|) src="([^"]+jpg)"  ').findall(link)
         matchduration = re.compile('time">(\d{1,}:\d{2}:?\d{0,2})').findall(link)
         for name, url, thumb, duration in zip(matchname, matchurl, matchthumb, matchduration):
                 addDownLink(name + ' ' + '(' + duration + ')', url, 2, "https:" + thumb)
-        matchpage = re.compile('pagination".+?active.+?<li><a href="([^"]+html)').findall(link)
+        matchpage = re.compile('pagination-next" href="([^"]+html)').findall(link)
         if matchpage:
                 addDir('Next Page', BASE_URL + '' + matchpage[0], 1, '')
 
@@ -59,6 +59,7 @@ def VIDEOLINKS(url, name):
                                 listitem = xbmcgui.ListItem(name)
                                 listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
                                 xbmc.Player().play('https:' + url, listitem)
+                                return
 
 
 def SEARCHVIDEOS(url):

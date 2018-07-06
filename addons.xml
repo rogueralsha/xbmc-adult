@@ -20,7 +20,7 @@
 
 <addon id="metadata.movie.aebn.gay.net"
        name="AEBN Gay"
-       version="1.2.2"
+       version="1.2.4"
        provider-name="xbmc-adult">
   <requires>
     <import addon="xbmc.metadata" version="1.0"/>
@@ -38,7 +38,7 @@
 
 <addon id="metadata.movie.aebn.net"
        name="AEBN"
-       version="1.2.2"
+       version="1.2.4"
        provider-name="xbmc-adult">
   <requires>
     <import addon="xbmc.metadata" version="1.0"/>
@@ -92,7 +92,7 @@
 
 <addon id="metadata.movie.data18.content.com"
        name="Data 18 Web Content"
-       version="1.7.0"
+       version="1.7.1"
        provider-name="xbmc-adult">
   <requires>
     <import addon="xbmc.metadata" version="1.0"/>
@@ -162,7 +162,7 @@
 
 <addon id="plugin.video.fantasticc"
        name="Fantasti.cc"
-       version="2.3.43"
+       version="2.3.44"
        provider-name="xbmc-adult">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -182,7 +182,7 @@
 
 <addon id="plugin.video.lubetube"
        name="Lubetube (Adult)"
-       version="1.17"
+       version="1.18"
        provider-name="xbmc-adult">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -215,7 +215,7 @@
 
 <addon
   id="plugin.video.videodevil"
-  version="1.7.184"
+  version="1.7.189"
   name="VideoDevil"
   provider-name="xbmc-adult">
   <requires>
@@ -250,7 +250,7 @@
 
 <addon id="plugin.video.you.jizz"
        name="YouJizz.com"
-       version="1.0.16"
+       version="1.0.19"
        provider-name="xbmc-adult">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>

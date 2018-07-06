@@ -158,7 +158,7 @@ action=prefix
 quality=standard
 ########################################################
 title=xhamster.com
-target=file: '([^']+)'
+target=(https:\\/\\/video.xhcdn.com[^"]+)
 url=%s
 quality=standard
 ########################################################
@@ -487,8 +487,22 @@ extension=mp4
 quality=standard
 ########################################################
 title=stileproject.com
-target=file:\s*'([^']+)',
+target=source\s*src="([^"]+)
+url=%s
+extension=mp4
+quality=high
+########################################################
+title=javhihi.com
+target=source\s*src="([^"]+)[^>]+480p
 url=%s
 extension=mp4
 quality=standard
+target=source\s*src="([^"]+)[^>]+720p
+url=%s
+extension=mp4
+quality=high
+target=source\s*src="([^"]+)[^>]+1080p
+url=%s
+extension=mp4
+quality=high
 ########################################################
